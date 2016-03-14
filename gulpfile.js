@@ -46,8 +46,3 @@ gulp.task('jshint', function(){
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 });
-
-
-var date = new Date ('2016/3/14');
-var datestring = moment(date.add({day: 1, months: 6}).format('1');
-console.log(datestring);

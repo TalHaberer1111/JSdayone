@@ -7,8 +7,12 @@
 // exports.Journal.prototype.wordCount = function() {
 //   return this.body.split(" ").length;
 // };
+var moment = require('moment');
+
 var Journal = function(entry){
   this.body = entry;
+  this.date = moment().format('MMMM Do YYYY, h:mm:ss a');
+  console.log(this.date);
 };
 // var Journal = function(entry) {
 //   this.body = entry;
@@ -19,7 +23,3 @@ Journal.prototype.wordCount = function() {
 
 // exports.Journal = Journal;
 exports.Journal = Journal;
-
-var date = new Date ('2016/3/14');
-var datestring = moment(date.add({day: 1, months: 6}).format('1');
-console.log(datestring);
