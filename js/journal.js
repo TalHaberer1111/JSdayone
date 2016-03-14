@@ -12,7 +12,7 @@ var moment = require('moment');
 var Journal = function(entry){
   this.body = entry;
   this.date = moment().format('MMMM Do YYYY, h:mm:ss a');
-  console.log(this.date);
+  // console.log(this.date);
 };
 // var Journal = function(entry) {
 //   this.body = entry;
@@ -23,3 +23,4 @@ Journal.prototype.wordCount = function() {
 
 // exports.Journal = Journal;
 exports.Journal = Journal;
+exports.moment = moment;

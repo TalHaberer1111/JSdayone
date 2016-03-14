@@ -13,7 +13,7 @@ var moment = require('moment');
 var Journal = function(entry){
   this.body = entry;
   this.date = moment().format('MMMM Do YYYY, h:mm:ss a');
-  console.log(this.date);
+  // console.log(this.date);
 };
 // var Journal = function(entry) {
 //   this.body = entry;
@@ -24,6 +24,7 @@ Journal.prototype.wordCount = function() {
 
 // exports.Journal = Journal;
 exports.Journal = Journal;
+exports.moment = moment;
 
 },{"moment":2}],2:[function(require,module,exports){
 //! moment.js
@@ -3716,6 +3717,7 @@ exports.Journal = Journal;
 }));
 },{}],3:[function(require,module,exports){
 var Journal = require('./../js/journal.js').Journal;
+var moment = require('./../js/journal.js').moment;
 
 $(document).ready(function() {
   $('#journal').submit(function(event) {
@@ -3724,7 +3726,7 @@ $(document).ready(function() {
     var journalEntry = new Journal(entry);
     var count = journalEntry.wordCount();
     alert(count);
-
+  $('#time').text(moment());
   });
 });
 
